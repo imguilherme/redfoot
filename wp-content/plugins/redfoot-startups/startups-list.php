@@ -13,7 +13,7 @@ function redfoot_startups_list() {
         </div>
         <?php
         global $wpdb;
-        $table_name = $wpdb->prefix . "school";
+        $table_name = $wpdb->prefix . "startup";
 
         $rows = $wpdb->get_results("SELECT id,name from $table_name");
         ?>

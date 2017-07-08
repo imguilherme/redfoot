@@ -13,7 +13,7 @@ function redfoot_startups_create() {
                 array('id' => $id, 'name' => $name), //data
                 array('%s', '%s') //data format			
         );
-        $message.="School inserted";
+        $message.="Startup criada";
     }
     ?>
     <link type="text/css" href="<?php echo WP_PLUGIN_URL; ?>/redfoot_startups/style-admin.css" rel="stylesheet" />
