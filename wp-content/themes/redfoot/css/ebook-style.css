@@ -1,0 +1,1856 @@
+/*
+	Landing Ebook Gratuito CSS
+	Author: Maruan Mendes
+*/
+
+/* Table of Contents
+	- General
+	- Header 
+	- Headline
+	- Video
+	- More About
+	- Author
+	- Footer
+	- Responsive Design - Media Queries
+		- (min-width:600px) and (max-width:940px)
+		- (min-width:500px) and (max-width:599px)
+		- (min-width:400px) and (max-width:499px)
+		- (max-width:399px)
+*/
+
+/* -----------------------------------------------------------------------
+GENERAL
+------------------------------------------------------------------------ */
+
+	body, h1, h2, h3, h4, h5, h6 {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	body {
+		background-color: #fff;
+		color: #41121E;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.3;
+		-webkit-font-smoothing: antialiased;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 42px;
+		line-height: 1.1;
+	}
+
+	h2 {
+		font-size: 30px;
+		line-height: 1.1;
+		margin: 0;
+	}
+
+	p {
+	    margin: 0 0 24px;
+	    padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000000;
+	}
+
+	ul {
+		float: left;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	img {
+		height: auto;
+		border-radius: 3px;
+	}
+
+
+	/*Forms*/
+
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.button {
+		background-color: #B02240;
+		color: #fff;
+		border: none;
+		box-shadow: none;
+		cursor: pointer;
+
+		font-size: 28px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		padding: 17px 22px;
+
+		text-transform: none;
+		width: auto;
+		-webkit-font-smoothing: antialiased;
+
+		border-radius: 6px;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+
+		margin: 15px 0 0;
+	}
+
+	button:hover,
+	input:hover[type="button"],
+	input:hover[type="reset"],
+	input:hover[type="submit"],
+	.button:hover {
+		opacity: 0.7;
+	    filter: alpha(opacity=70); /* For IE8 and earlier */
+	}
+
+	.button,
+	.button:hover {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button {
+		display: none;
+	}
+
+	input[type="search"], 
+	input[type="email"], textarea,
+	input[type="text"] {
+		background-color: #ffffff;
+		color: #666666;
+		font-size: 15px;
+		font-weight: bold;
+	    font-family: 'Open Sans', sans-serif;
+
+	    padding: 22px 16px;
+	    box-shadow: 1px 1px 3px #c5c9cc inset;
+	    border: 1px solid #bfbfbf;
+		width: 400px;
+
+		border-radius: 8px;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+
+	}
+
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	    color:    #666666;
+	}
+
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:    #666666;
+	   opacity:  1;
+	}
+
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:    #666666;
+	   opacity:  1;
+	}
+
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color:    #666666;
+	}
+
+	/*Custom*/
+
+	.site-container {
+		width: 100%;
+		float: left;
+	}
+
+	.container {
+		float: left;
+		width: 100%;
+	}
+
+	.site-inner {
+		clear: both;
+		margin: 0;
+		padding: 0;
+	}
+
+	.wrap {
+		margin: 0 auto;
+		max-width: 940px;
+	}
+
+	.align-left {
+		float: left;
+	}
+
+	.align-middle {
+	    margin: 0 auto;
+	}
+
+	.circle {
+		background-color: #82aad2;
+		border-radius: 50%;
+		width: 75px;
+		height: 75px; 
+		line-height: 75px;
+		text-align: center;
+		color: #ffffff;
+		font-size: 32px;
+		font-weight: 700;
+	}
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+	}
+
+
+/*-----------------------------------------------------------------------
+HEADER
+------------------------------------------------------------------------ */
+
+	.site-header {
+		background-color: #B02240;
+		float: left;
+		position: static;
+		width: 100%;
+	}
+
+	.site-header .wrap {
+	    padding: 11px 0;
+	}
+
+	.site-header .title-area {
+		width: 378px;
+		height: 59px;
+	    margin: 11px auto;
+	}
+
+	.site-header a {
+		float: left;
+	}
+
+	.site-title {
+		margin: 0;
+	}
+
+	/* LOGO */
+
+	.logo {
+		float: left;
+		width: 378px;
+		height: 59px;
+		background: transparent url(../images/logo-amocomosou.png) 0px 0px no-repeat;
+	}	
+
+	.logo-footer .logo {
+		background: transparent url(../images/logo-footer-amocomosou.png) 0px 0px no-repeat;
+	}
+
+	.logo:hover {
+		opacity: 0.8;
+	    filter: alpha(opacity=80); /* For IE8 and earlier */
+	}
+
+	.logo img {
+		width: 100%;
+		float: left;
+	}
+
+	.site-title {
+		margin: 0;
+		padding: 0;
+		letter-spacing: normal;
+		line-height: 1.625;
+	    text-transform: none;
+	}
+
+	.author-box:before, .clearfix:before, .entry-comments:before, .entry:before, .footer-widgets:before, .nav-primary:before, .nav-secondary:before, .pagination:before, .site-container:before, .site-footer:before, .site-header:before, .site-inner:before, .wrap:before {
+	    content: " ";
+	    display: table;
+	}
+
+	.author-box:after, .clearfix:after, .entry-comments:after, .entry:after, .footer-widgets:after, .nav-primary:after, .nav-secondary:after, .pagination:after, .site-container:after, .site-footer:after, .site-header:after, .site-inner:after, .wrap:after {
+	    clear: both;
+	    content: " ";
+	    display: table;
+	}
+
+
+
+
+	.site-inner {
+	    float: left;
+	    width: 100%;
+	    background-color: #FFFFFF;
+	    margin: 0 0 90px;
+	}
+
+
+
+
+
+/*-----------------------------------------------------------------------
+HEADLINE
+------------------------------------------------------------------------ */
+	
+	.headline .wrap {
+		width: 940px;
+	}
+
+	.headline-wrap {
+		float: left;
+		width: 412px;
+		padding-top: 70px;
+		padding-left: 46px;
+	}
+
+	.ebook-photo {
+		float: left;
+		padding: 0;
+		width: 482px;
+		margin: -12px 0 0;
+    	z-index: -1;
+	}
+
+	.ebook-mobile-centrilize {
+		width: auto;
+		float: left;
+	}
+
+	.ebook-photo img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.headline {
+		color: #404041;
+		padding: 0;
+	}
+
+	.headline h1 {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	.headline p {
+		margin-top: 0;
+		text-align: center;
+		margin-bottom: 30px;
+		width: 334px;
+	}
+
+	.head-video {
+		margin-bottom: 40px;
+	}
+
+	.subheadline {
+		width: 100%;
+		text-align: center;
+		margin: 16px auto 25px;
+		font-size: 21px;
+	}
+
+	.headline-wrap a {
+		float: left;
+	}
+
+	.headline-wrap .button {
+		background: #B02240 url(../images/ebook/icone-botao-seta-direita.png) no-repeat;
+		background-position: 315px 17px;
+		max-width: 241px;
+		padding: 17px 107px 17px 64px;
+		text-align: center;
+		margin: 0;
+		float: left;
+	}
+
+	.headline .cta-button {
+		width: auto;
+		float: left;
+	}
+
+
+/*-----------------------------------------------------------------------
+SOCIAL SHARE
+------------------------------------------------------------------------ */
+
+	.social-share {
+		/*margin-top: -55px;*/
+		z-index: 10;
+		position: fixed;
+	    top: 180px;
+		left: 10px;
+	}
+
+	.social-share .wrap {
+		width: 100px;
+	}
+
+	.social-share .face-container {
+		float: left;
+	}
+
+/*-----------------------------------------------------------------------
+VIDEO
+------------------------------------------------------------------------ */
+	.video {
+		text-align: center;
+		padding: 30px 0 50px;
+	}
+
+	.video iframe {
+		width: 748px;
+		height: 420px;
+	}
+
+/*-----------------------------------------------------------------------
+MORE ABOUT
+------------------------------------------------------------------------ */
+
+	.more-about {
+		padding: 20px 0;
+	}
+
+	.more-about .wrap {
+		width: 855px;
+	}
+
+	.more-about p {
+		text-align: center;
+		line-height: 1.4;
+		margin: 0;
+	}
+
+/*-----------------------------------------------------------------------
+AUTHOR
+------------------------------------------------------------------------ */
+
+	.author .wrap{
+		background-color: #F1F1F1;
+		border-radius: 5px;
+		padding: 30px 30px;
+	}
+
+	.author .photo {
+		float: left;
+		margin-right: 30px;
+	}
+
+	.author p {
+		float: left;
+		width: 745px;
+		margin: 0 auto;
+		padding: 13px 0 0;
+	}
+
+
+/*-----------------------------------------------------------------------
+FOOTER
+------------------------------------------------------------------------ */
+
+	/* Site footer*/
+	.site-footer {
+		float: left;
+		width: 100%;
+		background-color: #F1F1F1;
+		padding: 0 0 30px;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	.site-footer p {
+		margin-bottom: 0;
+	}
+
+	/* Pré footer*/
+
+	.pre-footer-block {
+		background-color: #FFFFFF;
+	}
+
+
+	/*	----------------------
+	* 	FOOTER LOGO
+	*	----------------------*/
+
+	.logo-footer {
+		width: 378px;
+		float: none;
+		margin: 0 auto;
+	}
+
+
+	.site-footer .container.social-midia-icons {
+		border: none;
+		margin-bottom: 20px;
+	}
+
+	.site-footer .social-midia-icons .sm-wrap {
+		float: none;
+	    width: 165px;
+	    margin: 0 auto;
+	}
+
+	.site-footer .logo {
+		margin-bottom: 20px;
+	}
+
+
+/*	----------------------
+* 	FOOTER NAV MENU
+*	----------------------*/
+	.nav-secondary {
+	    margin-top: 20px;
+	    float: left;
+	    width: 100%;
+	}
+
+	.nav-secondary a {
+		font-size: 15px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0 5px;
+		color: #7f7f7f;
+	}
+
+
+	.nav-secondary a:hover, .nav-secondary .current-menu-item > a {
+	    color: #b02240;
+	}
+
+	.nav-secondary ul {
+		width: 395px;
+		float: none;
+		margin:	0 auto;
+		padding: 0;
+	}
+
+	.nav-secondary ul li {
+	    border-width: 0;
+	    display: inline-block;
+	    margin: 0;
+	    padding-bottom: 0;
+	    text-align: left;
+	}
+
+
+/*	----------------------
+* 	FOOTER CREDITS
+*	----------------------*/
+
+	.site-footer .creds {
+		float: left;
+		width: 100%;
+		margin-top: 15px;
+		font-size: 14px;
+		color: #636363;
+	}
+
+	.site-footer .creds a {
+	    color: #41121E;
+	    font-size: 17px;
+	    font-weight: bold;
+	    color: #7f7f7f;
+	}
+
+	.site-footer .creds a:hover {
+	    color: #b02240;
+	}
+
+
+	/*Social media icons*/
+
+	.social-midia-icons a {
+	    display: block;
+	    float: left;
+	    overflow: hidden;
+	    padding: 0;
+	    text-indent: -9999px;
+	    margin-left: 10px;
+	    -webkit-transition: none;
+	    -moz-transition: none;
+	    -o-transition: none;
+	    -ms-transition: none;
+	    transition: none;
+	    background: url(../images/social-media-icons-sprite.png) -51px 0px no-repeat;
+	    height: 30px;
+	}
+
+	.site-footer .social-midia-icons a {
+		background-position-x: -102px;
+	}
+
+	.social-midia-icons .facebook {
+		width: 30px;
+		margin-left: 0;
+		background-position-y: 0px;
+	}
+
+	.social-midia-icons .instagram {
+		width: 30px;
+		background-position-y: -43px;
+	}
+
+	.social-midia-icons .twitter {
+		width: 36px;
+		background-position-y: -86px;
+	}
+
+	.social-midia-icons .youtube {
+		width: 41px;
+		margin-left: 8px;
+		background-position-y: -129px;
+	}
+
+	.social-midia-icons a:hover {
+		background-position-x: -102px;
+		margin-top: 2px;
+	}
+
+/*-----------------------------------------------------------------------
+LIGHTBOX
+-----------------------------------------------------------------------*/
+
+	.backdrop
+	{
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		background:#543d3d;
+		opacity: .90;
+		filter:alpha(opacity=90);
+		z-index:50;
+		display:none;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+    transition: width 2s;
+	}
+
+	.box
+	{
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 460px;
+	    height: 354px;
+	    margin-left: -230px;
+	    margin-top: -177px;
+		background: #ffffff;
+		z-index: 51;
+		padding: 10px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow:0px 0px 5px #444444;
+		-webkit-box-shadow:0px 0px 5px #444444;
+		box-shadow:0px 0px 5px #444444;
+		display:none;
+		    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+    transition: width 2s;
+	}
+
+	.box .wrap {
+	    width: 386px;
+	}
+
+	.close
+	{
+		float: right;
+		margin-right: 6px;
+		cursor: pointer;
+	}
+
+
+	.box-image {
+		width: 200px;
+		height: 249px;
+	}
+
+	.box-image img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.box-headline {
+		float: left;
+		margin: 0;
+		width: 396px;
+	    text-align: center;
+	}
+
+	.box-headline p {
+	    font-weight: bold;
+	    margin: 0;
+	}
+
+	.box-arrow {
+		width: 111px;
+		height: 61px;
+	}
+
+
+	.box-email {
+		margin-top: 20px;
+	}
+
+	.box-email input[type="email"] {
+		width: 350px;
+	}
+
+	.box-email input[type="submit"] {
+		width: 100%;
+	}
+
+
+/*-----------------------------------------------------------------------
+SECURITY
+------------------------------------------------------------------------ */
+
+	.security {
+		width: 248px;
+		height: 60px;
+		float: none;
+		margin: 15px auto 0;
+	}
+
+	.span#siteseal {
+		float: left;
+	}
+
+
+/*-----------------------------------------------------------------------
+VERIFY BLOCK
+------------------------------------------------------------------------ */
+	
+	.verify .wrap {
+		width: 770px;
+	}
+
+	.verify h1 {
+		text-align: center;
+		margin-bottom: 12px;
+	}
+
+	.verify h2 {
+		margin-bottom: 10px;
+	}
+
+	.verify .item {
+		margin-bottom: 15px;
+	}
+
+	.verify .topic {
+		float: left;
+		width: 680px;
+		padding: 22px 0 0;
+	}
+
+	.verify .circle {
+		margin-right: 15px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	p.subheadline {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	p.description {
+		margin-top: 0;
+	}
+
+	.icon-block {
+		float: left;
+		margin-right: 15px;
+	}
+
+	.icon-block a {
+		float: left;
+	}
+
+	.gmail-icon .email-icons {
+		width: 95px;
+		height: 75px;
+	}
+
+	.yahoo-icon .email-icons {
+		width: 93px;
+		height: 67px;
+	}
+
+	.outlook-icon .email-icons {
+		width: 66px;
+		height: 67px;
+	}
+
+	.email-icons img {
+		width: 100%;
+		height: 100%;
+	}
+
+
+	.outlook-icon .email-icons,
+	.yahoo-icon .email-icons {
+		padding-top: 5px;
+	}
+
+	.outlook-icon {
+		margin-right: 0;
+	}
+
+	.email-image .align-helper {
+		width: 642px;
+		height: 457px;
+		float: left;
+	}
+
+	.email-image img {
+		width: 100%;
+		width: 100%;
+	}
+
+	.landing-confirma .site-inner {
+    	margin: 0;
+	}
+
+	body.landing-confirma {
+		font-weight: 300;
+	}
+
+
+
+
+/*-----------------------------------------------------------------------
+RESPONSIVE DESIGN - MEDIA QUERIES
+------------------------------------------------------------------------ */
+
+
+/*	-----------------------------------------------------------------
+*	CUSTOM - MEDIA QUERIES - RESPONSIVE DESIGN
+*	-----------------------------------------------------------------*/
+
+
+@media only screen and (min-width:961px) and (max-width:1140px) {
+
+	.wrap {
+		width: 940px;
+	}
+
+	.author .wrap {
+	    padding: 30px 0;
+	}
+
+	.author p {
+		width: 700px;
+	}
+
+	.author .photo {
+	    margin-left: 39px;
+	}
+
+/*
+* SOCIAL SHARE
+*/
+
+	.social-share .wrap {
+	    width: 845px;
+	}
+
+	.social-share {
+	    margin-top: -55px;
+	    z-index: 10;
+	    position: relative;
+	    top: auto;
+	    left: auto;
+	    float: left;
+	    width: 100%;
+	}
+
+
+
+} /*End of (min-width:961px) and (max-width:1200px)*/
+
+
+
+@media only screen and (min-width:800px) and (max-width:960px) {
+
+	.wrap, .headline .wrap, .more-about .wrap {
+		width: 768px;
+	}
+
+/*
+* HEADER
+*/
+
+	.site-header .wrap {
+		display: block;
+		padding: 20px 0 0;
+	}
+
+	.site-header .title-area, .logo-footer {
+		width: 295px;
+	}
+
+	.site-header .title-area {
+		float: none;
+    	margin: 0 auto 10px;
+
+    	-webkit-box-ordinal-group: 0;
+	    -moz-box-ordinal-group: 0;
+	    -ms-flex-order: 0;
+	    -webkit-order: 0;
+	    order: 0;
+	}
+
+	.logo {
+		float: left;
+		width: 295px;
+		height: 46px;
+		background: transparent url(../images/logo-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+	.logo-footer .logo {
+		background: transparent url(../images/logo-footer-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+/*
+* HEADLINE
+*/
+
+	.headline-wrap {
+	    padding-left: 22px;
+    	width: 346px;
+    	padding-top: 53px;
+	}	
+
+	.headline-wrap h1 {
+		font-size: 34px;
+	}
+
+	.headline-wrap .button {
+		background-position: 272px 17px;
+	    padding: 17px 74px 17px 31px;
+	    font-size: 25px;
+	}
+
+	.ebook-photo {
+		width: 400px;
+		margin-right: 0;
+		margin: -7px 0 0;
+	}
+
+/*
+* SOCIAL WRAP
+*/
+	.social-share .wrap {
+		width: 725px;
+	}
+
+	.social-share {
+		margin-top: -40px;
+		position: relative;
+		top: auto;
+		left: auto;
+	    float: left;
+	    width: 100%;
+	}
+
+/*
+* AUTHOR
+*/
+
+	.author h2 {
+		display: none;
+	}
+
+	.author .wrap {
+		background-color: #FFFFFF;
+		padding: 30px 0;
+
+	}
+
+	.author .photo {
+		width: 150px;
+		height: 151px;
+		margin: 0;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.author p {
+		text-align: center;
+		width: 100%;
+	}
+
+
+
+/*
+* FOOTER
+*/
+	.site-inner {
+	    margin-bottom: 40px;
+	}
+
+
+/* Verify */
+
+	.verify .wrap {
+		width: 590px;
+	}
+
+	.verify .topic {
+		width: 500px;
+		padding-top: 13px;
+	}
+
+	.verify .circle {
+		width: 60px;
+    	height: 60px;
+    	line-height: 60px;
+	}
+
+	.email-image .align-helper {
+	    width: 452px;
+	    height: 322px;
+	}
+
+
+} /*End of (min-width:800px) and (max-width:960px)*/
+
+
+@media only screen and (min-width:600px) and (max-width:799px) {
+
+	.wrap, .headline .wrap, .more-about .wrap, .social-share .wrap {
+		width: 580px;
+	}
+
+	.site-inner {
+		padding: 0;
+	}
+
+/*
+* HEADER
+*/
+
+	.site-header .wrap {
+		display: block;
+		padding: 20px 0 0;
+	}
+
+	.site-header .title-area, .logo-footer {
+		width: 295px;
+	}
+
+	.site-header .title-area {
+		float: none;
+    	margin: 0 auto 10px;
+
+    	-webkit-box-ordinal-group: 0;
+	    -moz-box-ordinal-group: 0;
+	    -ms-flex-order: 0;
+	    -webkit-order: 0;
+	    order: 0;
+	}
+
+	.logo {
+		float: left;
+		width: 295px;
+		height: 46px;
+		background: transparent url(../images/logo-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+	.logo-footer .logo {
+		background: transparent url(../images/logo-footer-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+	
+/*
+* HEADLINE
+*/
+
+	.headline-wrap {
+	    float: left;
+	    width: 100%;
+	    padding-top: 20px;
+	    padding-left: 0;
+	}
+
+	.headline p {
+		width: 100%;
+	}
+
+	.headline .cta-button {
+		width: 412px;
+		height: 70px;
+		float: none;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.headline .ebook-mobile-centrilize {
+		width: 482px;
+		float: none;
+		margin: 0 auto;
+	}
+
+/*
+* SOCIAL WRAP
+*/
+	.social-share .wrap {
+		width: 100px;
+	}
+
+	.social-share {
+		margin-top: -30px;
+	    position: relative;
+	    top: auto;
+	    left: auto;
+	    float: left;
+	    width: 100%;
+	}
+
+
+/*
+* VIDEO
+*/
+
+	.video iframe {
+		max-width: 580px;
+		height: 325px;;
+	}
+
+/*
+* AUTHOR
+*/
+
+	.author h2 {
+		display: none;
+	}
+
+	.author .wrap {
+		background-color: #FFFFFF;
+		padding: 30px 0;
+
+	}
+
+	.author .photo {
+		width: 150px;
+		height: 151px;
+		margin: 0;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.author p {
+		text-align: center;
+		width: 100%;
+	}
+
+
+/*
+* FOOTER
+*/
+	.site-inner {
+	    margin-bottom: 20px;
+	}
+
+
+/* Verify */
+
+	.verify .wrap {
+		width: 590px;
+	}
+
+	.verify .topic {
+		width: 500px;
+		padding-top: 13px;
+	}
+
+	.verify .circle {
+		width: 60px;
+    	height: 60px;
+    	line-height: 60px;
+	}
+
+	.email-image .align-helper {
+	    width: 452px;
+	    height: 322px;
+	}
+
+
+} /* End of (min-width:600px) and (max-width:799px) */
+
+
+@media only screen and (min-width:500px) and (max-width:599px) {
+
+	.wrap, .headline .wrap, .headline .ebook-photo, .more-about .wrap {
+		width: 468px;
+	}
+
+	.home .content {
+	    padding-top: 30px;
+	}
+
+	.site-inner {
+		padding: 0;
+	}
+
+/*
+* HEADER
+*/
+
+	.site-header .wrap {
+		display: block;
+		padding: 20px 0 0;
+	}
+
+	.site-header .title-area, .logo-footer {
+		width: 295px;
+	}
+
+	.site-header .title-area {
+		float: none;
+    	margin: 0 auto 10px;
+
+    	-webkit-box-ordinal-group: 0;
+	    -moz-box-ordinal-group: 0;
+	    -ms-flex-order: 0;
+	    -webkit-order: 0;
+	    order: 0;
+	}
+
+	.logo {
+		float: left;
+		width: 295px;
+		height: 46px;
+		background: transparent url(../images/logo-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+	.logo-footer .logo {
+		background: transparent url(../images/logo-footer-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+/*
+* HEADLINE
+*/
+
+	.headline-wrap {
+	    float: left;
+	    width: 100%;
+	    padding-top: 20px;
+	    padding-left: 0;
+	}
+
+	.headline p {
+		width: 100%;
+	}
+
+	.headline .cta-button {
+		width: 412px;
+		height: 70px;
+		float: none;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.headline .ebook-mobile-centrilize {
+		width: 482px;
+		float: none;
+		margin: 0 auto;
+	}
+
+/*
+* SOCIAL WRAP
+*/
+	.social-share .wrap {
+		width: 100px;
+	}
+
+	.social-share {
+		margin-top: -30px;
+	    position: relative;
+	    top: auto;
+	    left: auto;
+	    float: left;
+	    width: 100%;
+	}
+
+
+/*
+* VIDEO
+*/
+
+	.video iframe {
+		max-width: 468px;
+		height: 262px;;
+	}
+
+/*
+* AUTHOR
+*/
+
+	.author h2 {
+		display: none;
+	}
+
+	.author .wrap {
+		background-color: #FFFFFF;
+		padding: 30px 0;
+
+	}
+
+	.author .photo {
+		width: 150px;
+		height: 151px;
+		margin: 0;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.author p {
+		text-align: center;
+		width: 100%;
+	}
+
+/*
+* FOOTER
+*/
+	.site-inner {
+	    margin-bottom: 20px;
+	}
+
+/*
+* LIGHTBOX
+*/
+
+	.box {
+		width: 376px;
+	    height: 340px;
+	    margin-left: -188px;
+	    margin-top: -170px;
+	}
+
+	.box .wrap {
+	    width: 376px;
+	    margin: 0;
+	}
+
+	.box-headline {
+		font-size: 24px;
+		width: 100%;
+	}
+
+	.box-email input[type="email"] {
+		width: 342px;
+	}
+
+	.box .button {
+		font-size: 21px;
+	}
+
+
+/* Verify */
+
+	.verify .wrap {
+		width: 500px;
+	}
+
+	.verify .topic {
+		width: 430px;
+		padding-top: 12px;
+	}
+
+	.verify .circle {
+		width: 50px;
+    	height: 50px;
+    	line-height: 50px;
+    	font-size: 25px;
+	}
+
+
+	.gmail-icon .email-icons {
+		width: 82px;
+		height: 65px;
+	}
+
+	.yahoo-icon .email-icons {
+		width: 80px;
+		height: 58px;
+	}
+
+	.outlook-icon .email-icons {
+		width: 59px;
+		height: 60px;
+	}
+
+
+	.email-image .align-helper {
+	    width: 425px;
+	    height: 303px;
+	}
+
+} /* End of (min-width:500px) and (max-width:599px) */
+
+
+@media only screen and (min-width:400px) and (max-width:499px) {
+
+	.wrap,.headline .wrap, .more-about .wrap {
+		width: 97%;
+	}
+
+/*
+* HEADER
+*/
+
+	.site-header .wrap {
+		display: block;
+		padding: 20px 0 0;
+	}
+
+	.site-header .title-area, .logo-footer {
+		width: 295px;
+	}
+
+	.site-header .title-area {
+		float: none;
+    	margin: 0 auto 10px;
+
+    	-webkit-box-ordinal-group: 0;
+	    -moz-box-ordinal-group: 0;
+	    -ms-flex-order: 0;
+	    -webkit-order: 0;
+	    order: 0;
+	}
+
+	.logo {
+		float: left;
+		width: 295px;
+		height: 46px;
+		background: transparent url(../images/logo-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+	
+	.logo-footer .logo {
+		background: transparent url(../images/logo-footer-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+/*
+* HEADLINE
+*/
+
+	.headline-wrap {
+	    float: left;
+	    width: 100%;
+	    padding-top: 20px;
+	    padding-left: 0;
+	}
+
+	.headline h1 {
+		font-size: 39px;
+	}
+
+	.headline p {
+		width: 100%;
+	}
+
+	.headline .cta-button {
+		width: 347px;
+		height: 66px;
+		float: none;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.headline-wrap .button {
+		background-position: 272px 17px;
+	    padding: 17px 74px 17px 31px;
+	    font-size: 25px;
+	}
+
+	.headline .ebook-mobile-centrilize {
+		width: 370px;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.headline .ebook-photo {
+		width: 370px;
+	}
+
+
+/*
+* SOCIAL WRAP
+*/
+	.social-share .wrap {
+		width: 100px;
+	}
+
+	.social-share {
+		margin-top: -20px;
+	    position: relative;
+	    top: auto;
+	    left: auto;
+	    float: left;
+	    width: 100%;
+	}
+
+
+
+/*
+* VIDEO
+*/
+
+	.video iframe {
+		max-width: 388px;
+		height: 217px;;
+	}
+
+/*
+* AUTHOR
+*/
+
+	.author h2 {
+		display: none;
+	}
+
+	.author .wrap {
+		background-color: #FFFFFF;
+		padding: 30px 0;
+
+	}
+
+	.author .photo {
+		width: 150px;
+		height: 151px;
+		margin: 0;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.author p {
+		text-align: center;
+		width: 100%;
+	}
+
+
+/*
+* FOOTER
+*/
+	.site-inner {
+	    margin-bottom: 20px;
+	}
+
+/*
+* LIGHTBOX
+*/
+
+	.box {
+		width: 286px;
+	    height: 322px;
+	    margin-left: -143px;
+	    margin-top: -161px;
+	}
+
+	.box .wrap {
+	    width: 284px;
+	    margin: 0;
+	}
+
+	.box-headline {
+		font-size: 20px;
+		width: 100%;
+	}
+
+	.box-email input[type="email"] {
+		width: 250px;
+	}
+
+	.box .button {
+		font-size: 21px;
+	}
+
+
+/* Verify */
+
+	.verify .wrap {
+		width: 400px;
+	}
+
+	.verify .topic {
+		width: 330px;
+		padding-top: 12px;
+	}
+
+	.verify .circle {
+		width: 50px;
+    	height: 50px;
+    	line-height: 50px;
+    	font-size: 25px;
+	}
+
+
+	.gmail-icon .email-icons {
+		width: 82px;
+		height: 65px;
+	}
+
+	.yahoo-icon .email-icons {
+		width: 80px;
+		height: 58px;
+	}
+
+	.outlook-icon .email-icons {
+		width: 59px;
+		height: 60px;
+	}
+
+
+	.email-image .align-helper {
+	    width: 336px;
+	    height: 239px;
+	}
+
+
+} /* End of (min-width:400px) and (max-width:499px) */
+
+
+
+
+
+@media only screen and (max-width:399px) {
+
+
+	.wrap, .headline .wrap, .more-about .wrap {
+		width: 97%;
+	}
+
+	.site-inner {
+		margin-bottom: 22px;
+	}
+
+
+/*
+* HEADER
+*/
+
+	.site-header .wrap {
+		display: block;
+		padding: 20px 0 0;
+	}
+
+	.site-header .title-area, .logo-footer {
+		width: 295px;
+	}
+
+	.site-header .title-area {
+		float: none;
+    	margin: 0 auto 10px;
+
+    	-webkit-box-ordinal-group: 0;
+	    -moz-box-ordinal-group: 0;
+	    -ms-flex-order: 0;
+	    -webkit-order: 0;
+	    order: 0;
+	}
+
+	.logo {
+		float: left;
+		width: 295px;
+		height: 46px;
+		background: transparent url(../images/logo-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+	
+	.logo-footer .logo {
+		background: transparent url(../images/logo-footer-amocomosou-295x46px.png) 0px 0px no-repeat;
+	}
+
+	
+
+/*
+* HEADLINE
+*/
+
+	.headline-wrap {
+	    float: left;
+	    width: 100%;
+	    padding-top: 20px;
+	    padding-left: 0;
+	}
+
+	.headline h1 {
+		font-size: 31px;
+	}
+
+	.headline p {
+		width: 100%;
+	}
+
+	.headline .cta-button {
+		width: 273px;
+		height: 63px;
+		float: none;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.headline-wrap .button {
+		background-position: 228px 14px;
+	    padding: 17px 35px 17px 1px;
+	    font-size: 23px;
+	}
+
+	.headline .ebook-mobile-centrilize {
+		width: 295px;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.headline .ebook-photo {
+		width: 295px;
+	}
+
+
+/*
+* SOCIAL WRAP
+*/
+	.social-share .wrap {
+		width: 100px;
+	}
+
+	.social-share {
+		margin-top: -10px;
+	    position: relative;
+	    top: auto;
+	    left: auto;
+	    float: left;
+	    width: 100%;
+	}
+
+
+/*
+* VIDEO
+*/
+
+	.video iframe {
+		max-width: 291px;
+		height: 163px;;
+	}
+
+/*
+* AUTHOR
+*/
+
+	.author h2 {
+		display: none;
+	}
+
+	.author .wrap {
+		background-color: #FFFFFF;
+		padding: 30px 0;
+
+	}
+
+	.author .photo {
+		width: 150px;
+		height: 151px;
+		margin: 0;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.author p {
+		text-align: center;
+		width: 100%;
+	}
+
+/*
+* FOOTER
+*/
+
+	.site-footer .genesis-nav-menu .menu-item {
+		text-align: center;
+	}
+
+	.nav-secondary ul {
+	    width: 245px;
+	}
+
+	.nav-secondary ul li {
+	    width: 100%;
+	}
+
+	.nav-secondary a {
+	    font-size: 18px;
+	}
+
+/*
+* LIGHTBOX
+*/
+
+	.box {
+	    width: 286px;
+	    height: 322px;
+	    margin-left: -143px;
+	    margin-top: -161px;
+	}
+
+	.box .wrap {
+	    width: 284px;
+	    margin: 0;
+	}
+
+	.box-headline {
+		font-size: 20px;
+		width: 100%;
+	}
+
+	.box-email input[type="email"] {
+		width: 250px;
+	}
+
+	.box .button {
+		font-size: 21px;
+	}
+
+
+/* Verify */
+
+	.verify .wrap {
+		width: 300px;
+	}
+
+	.verify .topic {
+		width: 290px;
+		padding-top: 12px;
+		text-align: center
+	}
+
+	.verify .circle {
+		display: none;
+	}
+
+
+	.gmail-icon .email-icons {
+		width: 82px;
+		height: 65px;
+	}
+
+	.yahoo-icon .email-icons {
+		width: 80px;
+		height: 58px;
+	}
+
+	.outlook-icon .email-icons {
+		width: 59px;
+		height: 60px;
+	}
+
+
+	.email-image .align-helper {
+	    width: 290px;
+	    height: 206px;
+	}
+
+
+} /* End of (min-width:399px) and (max-width:499px) */
