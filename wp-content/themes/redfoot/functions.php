@@ -630,11 +630,7 @@ add_filter('genesis_footer_creds_text', 'child_footer_creds_text');
 function child_footer_creds_text() {
     ?>
     <div class="creds" style="position:relative;">
-        <p>	
-            <img src='<?= get_stylesheet_directory_uri() ?>/images/logo-eventos-transparent.png' class='grayscale' style="height:35px;opacity:.45;position:absolute;left:50px;top:-10px;"> Copyright &copy; <?php echo date('Y'); ?> &middot; 
-            <a <?= 'href="' . home_url() . '"'; ?>>mobilize eventos</a>
-            &middot; Todos os direitos reservados
-        </p>
+      Insira o HTML em child_footer_creds_text(), no arquivo functions.php
     </div>
     <?php
 }
@@ -1258,13 +1254,13 @@ function custom_site_menu_ul() {
 
     global $post;
     $post_slug = $post->post_name;
+    echo $post_slug;
 
-    if ($post_slug === 'blog' || is_single()) {//blog & posts
+    if ($post_slug === 'blog' || $post_slug === 'ola-mundo' || is_single()) {//blog & posts
         ?>
 
         <ul>
-            <li><a href="<?= bloginfo('url') ?>/blog/check-list-de-casamento-modelos/" class="my-animation hidden-xs">Modelos de Checklist</a></li>
-            <li><a id="signin" class="my-animation" target="_blank" href="https://app.mobilizeeventos.com/">Criar casamento</a></li>
+          <li>alterar html na funcao custom_site_menu_ul (functions.php, if1)</li>
         </ul>
 
 
@@ -1273,12 +1269,7 @@ function custom_site_menu_ul() {
         ?>
 
         <ul>
-            <!--<li class="active"><a href="<?= bloginfo('url') ?>" class="my-animation">Home</a></li>-->
-            <li><a href="<?= bloginfo('url') ?>/cases" class="my-animation">Cases</a></li> 
-            <li><a href="<?= bloginfo('url') ?>/planos" class="my-animation">Planos</a></li> 
-            <!--<li><a href="<?= bloginfo('url') ?>/blog/" class="my-animation hidden-xs">Blog</a></li>-->
-            <li><a href="<?= bloginfo('url') ?>#contato" class="my-animation hidden-xs">Contato</a></li>
-            <li><a id="signin" class="my-animation" href="https://app.mobilizeeventos.com/">Entrar</a></li>
+          <li>alterar html na funcao custom_site_menu_ul (functions.php, if2)</li>
         </ul>
 
         <?php
@@ -1299,7 +1290,7 @@ function custom_site_title() {
     }
     ?>
     <a href="<?= $url ?>">
-        <img id="logo" class="my-animation" src="<?= get_stylesheet_directory_uri() ?>/images/logo-eventos-transparent.png" id="logo-mobile">
+        <img id="logo" class="my-animation" src="https://static.wixstatic.com/media/a6596d_7c3f7919b2fb4d79a57b1627ccc31a28~mv2.png/v1/fill/w_168,h_32,al_c,usm_0.66_1.00_0.01/a6596d_7c3f7919b2fb4d79a57b1627ccc31a28~mv2.png" id="logo-mobile">
     </a>
     <?php
 }
@@ -1313,32 +1304,7 @@ add_action('genesis_before_footer', 'custom_footer');
 function custom_footer() {
     ?>
     <div id="pre-footer" class="wrap" style='border-top: 1px solid #eee;padding-top: 30px;'>
-        <div class="row" id='footer-links'>
-            <div class="col-lg-3 col-md-6 col-sm-4 hidden-xs no-padding padding-bottom text-left">
-                <ul>
-                    <li class="title">mobilize eventos</li>
-                    <!--<li><a href="http://mobilizesolucoes.com.br/" target='_blank'>Quem é a Mobilize</a></li>-->
-                    <li><a href="<?= bloginfo('url') ?>/#main" target="_blank">A Ferramenta</a></li>
-                    <li><a href="<?= bloginfo('url') ?>/planos" target="_blank">Planos e Preços</a></li>
-                    <li><a href="https://mobilizeeventos.com/terms" target="_blank">Termos de Uso</a> e <a href="https://mobilizeeventos.com/privacy" target="_blank">Política de privacidade</a></li>
-                    <!--<li><a href="#">Política de Privacidade</a></li>-->
-                    <li><a href="https://app.mobilizeeventos.com/">Entrar</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-4 hidden-xs no-padding padding-bottom text-left">
-                <ul>
-                    <li class="title" style="color:white;">Saiba mais</li>
-                    <li><a href="<?= bloginfo('url') ?>/blog/" target="_blank">Blog</a></li>
-                    <!-- <li><a href="<?= bloginfo('url') ?>/parceria">Parceria</a></li> -->
-                    <li><a href="https://help.mobilizeeventos.com/" target="_blank">Centro de Ajuda</a></li>
-                    <li><a href="<?= bloginfo('url') ?>/ebook-cerimonialista-conquistar-noivos/" target="_blank">Ebook "Conquistar mais noivas"</a></li>
-                    <!--<li><a href="#">Baixe o Guia de Funcionalidades</a></li>-->
-                </ul>
-            </div>
-            <div class="col-lg-5 hidden-md hidden-sm hidden-xs no-padding">
-                <div class="fb-page" data-href="https://www.facebook.com/mobilizeeventos" data-width="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mobilizeeventos" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mobilizeeventos">mobilize eventos</a></blockquote></div>
-            </div>
-        </div>
+        Insira o HTML em custom_footer() no arquivo functions.php
     </div>
     <?php
 }
