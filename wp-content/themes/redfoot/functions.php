@@ -7,10 +7,6 @@ define('CHILD_THEME_NAME', 'RedFoot Theme');
 define('CHILD_THEME_URL', 'https://redfoot.com');
 define('CHILD_THEME_VERSION', '1.0.0');
 
-
-//* mobilize init
-include('BaseDao.php');
-
 function isDevelopmentMode() {
     //DEV
     return true;
